@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>🔧 The Forge</title>
+        <link rel="icon" href="assets/images/favicon_10x.png">
+        <meta name="author" content="https://github.com/forgeworksdev">
+        <meta name="description" content="My dear website, blog and project sharing hub.">
+        <meta name="keywords" content="ForgeWorks, forgeworksdev, Godot, personal, gamedev, NekoWeb">
+        <link rel="stylesheet" href="css/stylev1.css">
+    </head>
+    <body>
+        <div style="text-align: center; padding: 32px;">
+            <img src="assets/images/welcome/welcome_10x.png" class=".pixel-art" style="height: 256px;">
+        </div>
+        <div class="container">
+            <div class="center-box header">
+                <marquee scrollamount="15" loop="infinite" direction="left" id="buttons-sites" style="padding: 5px; margin: 10px 0;">
+                    404 - NOT FOUND
+                </marquee>
+            </div>
+        <script>
+            const titles = ["🔥 The Forge", "🔨 The Forge", "🔧 The Forge"];
+            let counter = 0;
+            setInterval(() => {
+                document.title = titles[counter % titles.length];
+                counter++;
+            }, 1000);
+        </script>
+    </body>
+</html>

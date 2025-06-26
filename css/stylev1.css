@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color);
+    border: none;
+    border-radius: 0px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-color);
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background: var(--scrollbar-thumb-color); /* same as normal — no effect on press */
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color);
+    border: none;
+    border-radius: 0px;
+}
+
+*::-webkit-scrollbar-track:hover {
+    background: var(--scrollbar-track-color);
+}
+
+*::-webkit-scrollbar-track:active {
+    background: var(--scrollbar-track-color);
+}
+
+*::-webkit-scrollbar-corner {
+    background: rgba(0, 0, 0, 0);
+}
+
+body {
+    /*background-color: #151d28;*/
+    background-image: url("../assets/images/background_2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    padding: 20px 128px;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    grid-template-rows: repeat(7, auto);
+    grid-gap: 15px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.box {
+    background-color: #202e37;
+    border: 5px solid #ff00ff;
+    border-image: repeating-linear-gradient(-45deg, #ed7614, #ed7614 15px, #141617 15px, #141617 25px) 5;
+    padding: 15px;
+
+    min-height: 200px;
+    min-width: 200px;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+.list-box {
+    background-color: #202e37;
+    border: 5px solid #ff00ff;
+    border-image: repeating-linear-gradient(-45deg, #ed7614, #ed7614 15px, #141617 15px, #141617 25px) 5;
+    padding: 15px;
+
+    min-height: 200px;
+    min-width: 200px;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-box {
+    background-color: #202e37;
+    border: 5px solid #ff00ff;
+    border-image: repeating-linear-gradient(-45deg, #ed7614, #ed7614 15px, #141617 15px, #141617 25px) 5;
+    padding: 15px;
+
+    overflow: auto;
+    word-wrap: break-word;
+
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;
+}
+
+
+.header {
+    grid-area: 1 / 2 / 2 / 7;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* grid-area: row-start / column-start / row-end / column-end */
+
+
+.sidebar {
+    text-align: center;
+    grid-area: 2 / 2 / 7 / 3;
+}
+
+.blog {
+    grid-area: 2 / 3 / 7 / 6;
+}
+
+.links {
+    text-align: center;
+    grid-area: 4 / 6  / 7 / 7;
+}
+
+.nav {
+    grid-area: 2 / 6  / 4 / 7;
+}
+
+.footer {
+    grid-area: 7 / 2 / 8 / 7;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+h2 {
+    padding-bottom: 5px;
+    text-align: center;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ff6600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.blink {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.counter {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.pixel-art {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
